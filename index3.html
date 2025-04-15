@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro Pixel Art Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body class="bg-[#f9f9f9] text-black p-4">
+  <!-- Header -->
+  <header class="border border-black p-4 text-center mb-6">
+    <h1 class="text-xs tracking-widest">PIXEL ART & COLLECTIBLES</h1>
+    <h2 class="text-3xl font-bold text-yellow-500 drop-shadow-sm">RETRO PIXELS</h2>
+  </header>
+
+  <!-- Nav -->
+  <nav class="flex justify-center gap-6 border border-black p-2 uppercase text-sm font-semibold mb-6">
+    <a href="#" class="hover:underline">Home</a>
+    <a href="#" class="hover:underline">Explore</a>
+    <a href="#" class="hover:underline">Artists</a>
+    <a href="#" class="hover:underline">Upload</a>
+    <a href="#" class="hover:underline">Contact</a>
+  </nav>
+
+  <!-- Main Content Grid -->
+  <main class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- Left Section -->
+    <section class="md:col-span-2 border border-black p-4">
+      <h3 class="text-2xl font-bold mb-2">COLLECT PIXEL ART</h3>
+      <p class="text-sm mb-4">
+        Discover pixelated masterpieces by indie creators. From retro game sprites to lo-fi icons,
+        our collection spans characters, items, tilesets, and more.
+      </p>
+      <div class="w-40 h-40 bg-gray-200 border border-black flex items-center justify-center text-xs">[ Pixel Art ]</div>
+
+      <!-- Pricing Tiers -->
+      <div class="grid grid-cols-3 gap-2 mt-4 text-center text-xs">
+        <div class="border border-black p-2">
+          <p class="font-bold">SINGLE</p>
+          <p>One download</p>
+          <p class="font-bold mt-1">$2.99</p>
+        </div>
+        <div class="border border-black p-2 bg-yellow-100">
+          <p class="font-bold">BUNDLE</p>
+          <p>5 items pack</p>
+          <p class="font-bold mt-1">$9.99</p>
+        </div>
+        <div class="border border-black p-2">
+          <p class="font-bold">UNLIMITED</p>
+          <p>Full access</p>
+          <p class="font-bold mt-1">$19.99</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Section -->
+    <aside class="border border-black p-4 flex flex-col gap-4">
+      <div>
+        <p class="font-bold text-lg">PIXEL WIZARD</p>
+        <p class="text-xs text-gray-600">Animated Character</p>
+        <div class="w-full h-28 bg-gray-200 border border-black flex items-center justify-center text-xs mt-2">[ Art Preview ]</div>
+        <p class="text-sm font-bold mt-1">$4.99</p>
+      </div>
+      <div>
+        <p class="font-bold text-lg">SPACE COIN</p>
+        <p class="text-xs text-gray-600">In-game currency icon</p>
+        <div class="w-full h-28 bg-gray-200 border border-black flex items-center justify-center text-xs mt-2">[ Art Preview ]</div>
+        <p class="text-sm font-bold mt-1">$1.99</p>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
