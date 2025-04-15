@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Artists List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@hackernoon/pixel-icon-library@1.0.5/fonts/iconfont.min.css"
+    />
+    <style>
+      body {
+        font-family: "Courier New", monospace;
+        background-color: #fdf6e3;
+      }
+      .pixel-btn {
+        border: 3px solid black;
+        background: #ffd700;
+        padding: 6px 12px;
+        font-weight: bold;
+        box-shadow: 2px 2px 0 black;
+      }
+      .card {
+        border: 3px solid black;
+        background-color: white;
+        box-shadow: 2px 2px 0 black;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        min-width: 200px;
+        border: 3px solid black;
+        box-shadow: 2px 2px 0 black;
+        z-index: 1;
+      }
+      .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 2px solid black;
+      }
+      .dropdown-content a:last-child {
+        border-bottom: none;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .user-icon {
+        width: 32px;
+        height: 32px;
+        border: 2px solid black;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      input,
+      textarea,
+      select {
+        border: 3px solid black;
+        background: white;
+        box-shadow: 2px 2px 0 black;
+      }
+      input[type="file"] {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body class="p-6">
+    <!-- Navbar -->
+    <header class="max-w-4xl mx-auto">
+      <nav class="bg-white p-2 card">
+        <div class="flex justify-center items-center">
+          <div class="flex justify-between items-center w-full max-w-4xl px-4">
+            <a href="#" class="text-black text-xl font-bold border-r-2 border-black pr-4"
+              >RetroPixel</a
+            >
+            <div class="space-x-6">
+              <a href="/explore.html" class="text-black hover:text-yellow-500">Explore</a>
+              <a href="/artists.html" class="text-black hover:text-yellow-500">Artists</a>
+              <a href="/uploadart.html" class="text-black hover:text-yellow-500">Upload</a>
+              <div class="dropdown inline-block">
+                <i
+                  class="hn hn-user-solid text-2xl cursor-pointer"
+                  style="color: #ffd700"
+                ></i>
+                <div class="dropdown-content">
+                  <a href="/mycollections.html" class="text-black hover:text-yellow-500"
+                    >My Art Collection</a
+                  >
+                  <a href="/uploadart.html" class="text-black hover:text-yellow-500"
+                    >Upload New Pixel Art</a
+                  >
+                  <a href="/editprofile.html" class="text-black hover:text-yellow-500">Edit Profile</a>
+                  <a
+                  href="/order-details.html"
+                  class="text-black hover:text-yellow-500"
+                  >Order Details</a
+                >
+                  <a href="/auth.html" class="text-black hover:text-yellow-500">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Container with max width and centered -->
+    <div class="max-w-4xl mx-auto">
+      <!-- Header -->
+      <header class="mb-8 text-center card mt-8 p-6">
+        <h1 class="text-4xl font-bold">🎨 Artists</h1>
+        <p class="text-lg">Discover talented pixel artists and explore their works</p>
+      </header>
+
+      <!-- Artists List -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Artist 1 -->
+        <div class="card p-4">
+          <img
+            src="https://i.pravatar.cc/150?img=3"
+            alt="Artist"
+            class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-black"
+          />
+          <h2 class="text-xl font-bold text-center mb-2">PixelMaster</h2>
+          <p class="text-center mb-4">
+            A passionate pixel artist with a love for retro-style designs.
+          </p>
+          <div class="text-center">
+            <a href="/viewprofile.html" class="pixel-btn" onclick="storeArtistDetails('PixelMaster', 'A passionate pixel artist with a love for retro-style designs.', 'https://i.pravatar.cc/150?img=3')">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Artist 2 -->
+        <div class="card p-4">
+          <img
+            src="https://i.pravatar.cc/150?img=64"
+            alt="Artist"
+            class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-black"
+          />
+          <h2 class="text-xl font-bold text-center mb-2">RetroCreator</h2>
+          <p class="text-center mb-4">
+            Specializes in retro gaming artwork and 8-bit designs.
+          </p>
+          <div class="text-center">
+            <a href="/viewprofile.html" class="pixel-btn" onclick="storeArtistDetails('RetroCreator', 'Specializes in retro gaming artwork and 8-bit designs.', 'https://i.pravatar.cc/150?img=64')">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Artist 3 -->
+        <div class="card p-4">
+          <img
+            src="https://i.pravatar.cc/150?img=57"
+            alt="Artist"
+            class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-black"
+          />
+          <h2 class="text-xl font-bold text-center mb-2">PixelKing</h2>
+          <p class="text-center mb-4">
+            Creating timeless 8-bit pixel art with a modern twist.
+          </p>
+          <div class="text-center">
+            <a href="/viewprofile.html" class="pixel-btn" onclick="storeArtistDetails('PixelKing', 'Creating timeless 8-bit pixel art with a modern twist.', 'https://i.pravatar.cc/150?img=57')">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Artist 4 -->
+        <div class="card p-4">
+          <img
+            src="https://i.pravatar.cc/150?img=34"
+            alt="Artist"
+            class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-black"
+          />
+          <h2 class="text-xl font-bold text-center mb-2">RetroPixelArt</h2>
+          <p class="text-center mb-4">
+            Expert in pixel landscapes and characters.
+          </p>
+          <div class="text-center">
+            <a href="/viewprofile.html" class="pixel-btn" onclick="storeArtistDetails('RetroPixelArt', 'Expert in pixel landscapes and characters.', 'https://i.pravatar.cc/150?img=34')">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Store artist details in localStorage and redirect to the profile page
+      function storeArtistDetails(name, bio, image) {
+        localStorage.setItem('artistName', name);
+        localStorage.setItem('artistBio', bio);
+        localStorage.setItem('artistImage', image);
+      }
+
+      // Check if user is logged in (you'll need to implement this based on your auth system)
+      const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+      // Get the navbar elements
+      const loginLink = document.querySelector('a[href="auth.html"]');
+      const userDropdown = document.querySelector(".dropdown");
+
+      // Show/hide elements based on login state
+      if (isLoggedIn) {
+        loginLink.style.display = "none";
+        userDropdown.style.display = "inline-block";
+      } else {
+        loginLink.style.display = "inline-block";
+        userDropdown.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
