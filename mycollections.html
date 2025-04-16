@@ -114,7 +114,7 @@
 
         <!-- Nav links -->
         <nav id="menu" class="hidden md:flex space-x-6 items-center">
-          <a href="/" class="text-black hover:text-yellow-500"
+          <a href="/pixelartstore/" class="text-black hover:text-yellow-500"
             >Explore</a
           >
           <a href="artists.html" class="text-black hover:text-yellow-500"
@@ -265,6 +265,16 @@
     </div>
 
     <script>
+      window.onload = () => {
+        // Redirect to login.html if user is not logged in
+        const isLoggedInCheck = localStorage.getItem("isLoggedIn");
+
+        if (!isLoggedInCheck || isLoggedInCheck !== "true") {
+          window.location.href = "auth.html"; // Use relative path!
+          return;
+        }
+      };
+
       // Function to show the alert
       function showAlert(message = "Default message", title = "Alert") {
         const alertModal = document.getElementById("custom-alert");
