@@ -1,12 +1,11 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>  
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artists List</title>
-       <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <link
       rel="stylesheet"
@@ -20,18 +19,19 @@
     />
     <style>
       body {
-font-family: "Pixelify Sans", sans-serif;
+        font-family: "Pixelify Sans", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 600;        background-color: #fdf6e3;
+        font-weight: 600;
+        background-color: #fdf6e3;
       }
-    .pixel-btn {
+      .pixel-btn {
         border: 1px solid black;
         background: #ffd700;
         padding: 6px 12px;
         font-weight: bold;
         box-shadow: 3px 3px 0 black;
       }
-       .card {
+      .card {
         border: 1px solid black;
         background-color: white;
         box-shadow: 3px 3px 0 black;
@@ -83,56 +83,118 @@ font-family: "Pixelify Sans", sans-serif;
   </head>
   <body class="p-6">
     <!-- Navbar -->
-<header class="bg-white md:max-w-4xl mx-auto  card">
-      <div class="  px-4 py-3 flex items-center justify-between">
-        <a href="/index.html" class="text-xl font-bold text-black">RetroPixel</a>
-    
+    <header class="bg-white md:max-w-4xl mx-auto card">
+      <div class="px-4 py-3 flex items-center justify-between">
+        <a href="/pixelartstore/" class="text-xl font-bold text-black"
+          >RetroPixel</a
+        >
+
         <!-- Hamburger -->
-        <button id="menu-toggle" class="md:hidden text-2xl text-black focus:outline-none">
+        <button
+          id="menu-toggle"
+          class="md:hidden text-2xl text-black focus:outline-none"
+        >
           ☰
         </button>
-    
+
         <!-- Nav links -->
         <nav id="menu" class="hidden md:flex space-x-6 items-center">
-          <a href="/" class="text-black hover:text-yellow-500">Explore</a>
-          <a href="artists.html" class="text-black hover:text-yellow-500">Artists</a>
-          <a href="uploadart.html" class="text-black hover:text-yellow-500">Upload</a>
-          
+          <a
+            href="/pixelartstore/"
+            class="block text-black hover:text-yellow-500"
+            >Explore</a
+          >
+          <a href="artists.html" class="text-black hover:text-yellow-500"
+            >Artists</a
+          >
+          <a href="uploadart.html" class="text-black hover:text-yellow-500"
+            >Upload</a
+          >
+
           <!-- User dropdown -->
-          <div class="relative group ">
-            <i class="hn hn-user-solid text-2xl cursor-pointer" style="color: #ffd700"></i>
-            <div class="absolute hidden group-hover:block right-0 top-5 mt-2 w-48  bg-white card z-20">
-                <a href="mycollections.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">My Art Collection</a>
-                <a href="uploadart.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Upload New Pixel Art</a>
-                <a href="editprofile.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Edit Profile</a>
-                <a href="order-details.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Order Details</a>
-                <a href="auth.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Logout</a>
+          <div class="relative group">
+            <i
+              class="hn hn-user-solid text-2xl cursor-pointer"
+              style="color: #ffd700"
+            ></i>
+            <div
+              class="absolute hidden group-hover:block right-0 top-5 mt-2 w-48 bg-white card z-20"
+            >
+              <a
+                href="mycollections.html"
+                class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black"
+                >My Art Collection</a
+              >
+              <a
+                href="uploadart.html"
+                class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black"
+                >Upload New Pixel Art</a
+              >
+              <a
+                href="editprofile.html"
+                class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black"
+                >Edit Profile</a
+              >
+              <a
+                href="order-details.html"
+                class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black"
+                >Order Details</a
+              >
+              <a
+                href="auth.html"
+                class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black"
+                >Logout</a
+              >
             </div>
           </div>
         </nav>
       </div>
-    
+
       <!-- Mobile nav menu -->
       <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-        <a href="/" class="block text-black hover:text-yellow-500">Explore</a>
-        <a href="artists.html" class="block text-black hover:text-yellow-500">Artists</a>
-        <a href="uploadart.html" class="block text-black hover:text-yellow-500">Upload</a>
-    
+        <a href="/pixelartstore/" class="block text-black hover:text-yellow-500"
+          >Explore</a
+        >
+        <a href="artists.html" class="block text-black hover:text-yellow-500"
+          >Artists</a
+        >
+        <a href="uploadart.html" class="block text-black hover:text-yellow-500"
+          >Upload</a
+        >
+
         <!-- User dropdown (simplified for mobile) -->
         <div class="pt-2 border-t">
-          <a href="mycollections.html" class="block text-black hover:text-yellow-500">My Art Collection</a>
-          <a href="uploadart.html" class="block text-black hover:text-yellow-500">Upload New Pixel Art</a>
-          <a href="editprofile.html" class="block text-black hover:text-yellow-500">Edit Profile</a>
-          <a href="order-details.html" class="block text-black hover:text-yellow-500">Order Details</a>
-          <a href="auth.html" class="block text-black hover:text-yellow-500">Logout</a>
+          <a
+            href="mycollections.html"
+            class="block text-black hover:text-yellow-500"
+            >My Art Collection</a
+          >
+          <a
+            href="uploadart.html"
+            class="block text-black hover:text-yellow-500"
+            >Upload New Pixel Art</a
+          >
+          <a
+            href="editprofile.html"
+            class="block text-black hover:text-yellow-500"
+            >Edit Profile</a
+          >
+          <a
+            href="order-details.html"
+            class="block text-black hover:text-yellow-500"
+            >Order Details</a
+          >
+          <a href="auth.html" class="block text-black hover:text-yellow-500"
+            >Logout</a
+          >
         </div>
       </div>
-    
+
       <script>
         const toggleBtn = document.getElementById("menu-toggle");
         const menu = document.getElementById("menu");
         const mobileMenu = document.getElementById("mobile-menu");
-    
+
         toggleBtn.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
         });
@@ -143,8 +205,10 @@ font-family: "Pixelify Sans", sans-serif;
     <div class="md:max-w-4xl mx-auto">
       <!-- Header -->
       <header class="mb-8 text-center card mt-8 p-6">
-        <h1 class="text-4xl font-bold"> Artists</h1>
-        <p class="text-lg">Discover talented pixel artists and explore their works</p>
+        <h1 class="text-4xl font-bold">Artists</h1>
+        <p class="text-lg">
+          Discover talented pixel artists and explore their works
+        </p>
       </header>
 
       <!-- Artists List -->
@@ -161,7 +225,12 @@ font-family: "Pixelify Sans", sans-serif;
             A passionate pixel artist with a love for retro-style designs.
           </p>
           <div class="text-center">
-            <a href="veiwprofile.html" class="pixel-btn" onclick="storeArtistDetails('PixelMaster', 'A passionate pixel artist with a love for retro-style designs.', 'https://i.pravatar.cc/150?img=3')">View Profile</a>
+            <a
+              href="viewprofile.html"
+              class="pixel-btn"
+              onclick="storeArtistDetails('PixelMaster', 'A passionate pixel artist with a love for retro-style designs.', 'https://i.pravatar.cc/150?img=3')"
+              >View Profile</a
+            >
           </div>
         </div>
 
@@ -177,7 +246,12 @@ font-family: "Pixelify Sans", sans-serif;
             Specializes in retro gaming artwork and 8-bit designs.
           </p>
           <div class="text-center">
-            <a href="veiwprofile.html" class="pixel-btn" onclick="storeArtistDetails('RetroCreator', 'Specializes in retro gaming artwork and 8-bit designs.', 'https://i.pravatar.cc/150?img=64')">View Profile</a>
+            <a
+              href="veiwprofile.html"
+              class="pixel-btn"
+              onclick="storeArtistDetails('RetroCreator', 'Specializes in retro gaming artwork and 8-bit designs.', 'https://i.pravatar.cc/150?img=64')"
+              >View Profile</a
+            >
           </div>
         </div>
 
@@ -193,7 +267,12 @@ font-family: "Pixelify Sans", sans-serif;
             Creating timeless 8-bit pixel art with a modern twist.
           </p>
           <div class="text-center">
-            <a href="veiwprofile.html" class="pixel-btn" onclick="storeArtistDetails('PixelKing', 'Creating timeless 8-bit pixel art with a modern twist.', 'https://i.pravatar.cc/150?img=57')">View Profile</a>
+            <a
+              href="veiwprofile.html"
+              class="pixel-btn"
+              onclick="storeArtistDetails('PixelKing', 'Creating timeless 8-bit pixel art with a modern twist.', 'https://i.pravatar.cc/150?img=57')"
+              >View Profile</a
+            >
           </div>
         </div>
 
@@ -209,7 +288,12 @@ font-family: "Pixelify Sans", sans-serif;
             Expert in pixel landscapes and characters.
           </p>
           <div class="text-center">
-            <a href="veiwprofile.html" class="pixel-btn" onclick="storeArtistDetails('RetroPixelArt', 'Expert in pixel landscapes and characters.', 'https://i.pravatar.cc/150?img=34')">View Profile</a>
+            <a
+              href="veiwprofile.html"
+              class="pixel-btn"
+              onclick="storeArtistDetails('RetroPixelArt', 'Expert in pixel landscapes and characters.', 'https://i.pravatar.cc/150?img=34')"
+              >View Profile</a
+            >
           </div>
         </div>
       </div>
@@ -218,9 +302,9 @@ font-family: "Pixelify Sans", sans-serif;
     <script>
       // Store artist details in localStorage and redirect to the profile page
       function storeArtistDetails(name, bio, image) {
-        localStorage.setItem('artistName', name);
-        localStorage.setItem('artistBio', bio);
-        localStorage.setItem('artistImage', image);
+        localStorage.setItem("artistName", name);
+        localStorage.setItem("artistBio", bio);
+        localStorage.setItem("artistImage", image);
       }
 
       // Check if user is logged in (you'll need to implement this based on your auth system)

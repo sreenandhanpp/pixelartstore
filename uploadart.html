@@ -133,7 +133,7 @@
   <body class="p-6">
     <header class="bg-white md:max-w-4xl mx-auto card">
       <div class="px-4 py-3 flex items-center justify-between">
-        <a href="/index.html" class="text-xl font-bold text-black"
+        <a href="/pixelartstore/" class="text-xl font-bold text-black"
           >RetroPixel</a
         >
 
@@ -147,7 +147,11 @@
 
         <!-- Nav links -->
         <nav id="menu" class="hidden md:flex space-x-6 items-center">
-          <a href="/" class="text-black hover:text-yellow-500">Explore</a>
+          <a
+            href="/pixelartstore/"
+            class="block text-black hover:text-yellow-500"
+            >Explore</a
+          >
           <a href="artists.html" class="text-black hover:text-yellow-500"
             >Artists</a
           >
@@ -196,7 +200,9 @@
 
       <!-- Mobile nav menu -->
       <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-        <a href="/" class="block text-black hover:text-yellow-500">Explore</a>
+        <a href="/pixelartstore/" class="block text-black hover:text-yellow-500"
+          >Explore</a
+        >
         <a href="artists.html" class="block text-black hover:text-yellow-500"
           >Artists</a
         >
@@ -288,17 +294,12 @@
             />
           </div>
 
-            <div class="mb-4">
+          <div class="mb-4">
             <label class="block font-bold mb-1">Upload Image</label>
-            <input
-              type="file"
-              accept="image/*"
-              class="w-full p-2"
-              required
-            />
-            </div>
+            <input type="file" accept="image/*" class="w-full p-2" required />
+          </div>
 
-          <div class="text-right ">
+          <div class="text-right">
             <button type="submit" class="pixel-btn">Upload</button>
           </div>
           <div class="loading" id="loadingScreen">
@@ -388,7 +389,7 @@
           window.location.href = "auth.html"; // Use relative path!
           return;
         }
-        
+
         // Get input values
         const title = form.querySelector('input[type="text"]').value;
         const description = form.querySelector("textarea").value;
