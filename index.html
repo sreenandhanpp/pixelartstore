@@ -7,26 +7,34 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@hackernoon/pixel-icon-library@1.0.5/fonts/iconfont.min.css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
+
     <style>
       body {
-        font-family: "Courier New", monospace;
+font-family: "Pixelify Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;        
+        font-style: normal;
         background-color: #fdf6e3;
       }
       .pixel-btn {
-        border: 3px solid black;
+        border: 1px solid black;
         background: #ffd700;
         padding: 6px 12px;
         font-weight: bold;
-        box-shadow: 2px 2px 0 black;
+        box-shadow: 3px 3px 0 black;
       }
-      .card {
-        border: 3px solid black;
+       .card {
+        border: 1px solid black;
         background-color: white;
-        box-shadow: 2px 2px 0 black;
+        box-shadow: 3px 3px 0 black;
       }
       .dropdown {
         position: relative;
@@ -81,15 +89,6 @@
         box-shadow: 2px 2px 0 black;
       }
 
-      .pixel-btn {
-        border: 3px solid black;
-        background: #ffd700;
-        padding: 6px 12px;
-        font-weight: bold;
-        box-shadow: 2px 2px 0 black;
-        cursor: pointer;
-      }
-
       .pixel-btn:hover {
         background-color: #e0b000;
       }
@@ -101,67 +100,67 @@
   </head>
   <body class="p-6">
     <!-- Navbar -->
-    <header class="max-w-4xl mx-auto">
-      <nav class="bg-white p-2 card">
-        <div class="flex justify-center items-center">
-          <div class="flex justify-between items-center w-full max-w-4xl px-4">
-            <a
-              href="#"
-              class="text-black text-xl font-bold border-r-2 border-black pr-4"
-              >RetroPixel</a
-            >
-            <div class="space-x-6">
-              <a href="/index.html" class="text-black hover:text-yellow-500"
-                >Explore</a
-              >
-              <a href="/artists.html" class="text-black hover:text-yellow-500"
-                >Artists</a
-              >
-              <a href="/uploadart.html" class="text-black hover:text-yellow-500"
-                >Upload</a
-              >
-              <div class="dropdown inline-block">
-                <i
-                  class="hn hn-user-solid text-2xl cursor-pointer"
-                  style="color: #ffd700"
-                ></i>
-                <div class="dropdown-content">
-                  <a
-                    href="/mycollections.html"
-                    class="text-black hover:text-yellow-500"
-                    >My Art Collection</a
-                  >
-                  <a
-                    href="/uploadart.html"
-                    class="text-black hover:text-yellow-500"
-                    >Upload New Pixel Art</a
-                  >
-                  <a
-                    href="/editprofile.html"
-                    class="text-black hover:text-yellow-500"
-                    >Edit Profile</a
-                  >
-                  <a
-                  href="/order-details.html"
-                  class="text-black hover:text-yellow-500"
-                  >Order Details</a
-                >
-                  <a href="/auth.html" class="text-black hover:text-yellow-500"
-                    >Logout</a
-                  >
-                </div>
-              </div>
+    <header class="bg-white max-w-4xl mx-auto  card">
+      <div class="  px-4 py-3 flex items-center justify-between">
+        <a href="/index.html" class="text-xl font-bold text-black">RetroPixel</a>
+        <!-- Hamburger -->
+        <button id="menu-toggle" class="md:hidden text-2xl text-black focus:outline-none">
+          ☰
+        </button>
+    
+        <!-- Nav links -->
+        <nav id="menu" class="hidden md:flex space-x-6 items-center">
+          <a href="/index.html" class="text-black hover:text-yellow-500">Explore</a>
+          <a href="/artists.html" class="text-black hover:text-yellow-500">Artists</a>
+          <a href="/uploadart.html" class="text-black hover:text-yellow-500">Upload</a>
+          
+          <!-- User dropdown -->
+          <div class="relative group ">
+            <i class="hn hn-user-solid text-2xl cursor-pointer" style="color: #ffd700"></i>
+            <div class="absolute hidden group-hover:block right-0 top-5 mt-2 w-48  bg-white card z-20">
+                <a href="/mycollections.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">My Art Collection</a>
+                <a href="/uploadart.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Upload New Pixel Art</a>
+                <a href="/editprofile.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Edit Profile</a>
+                <a href="/order-details.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Order Details</a>
+                <a href="/auth.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Logout</a>
             </div>
           </div>
+        </nav>
+      </div>
+    
+      <!-- Mobile nav menu -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+        <a href="/index.html" class="block text-black hover:text-yellow-500">Explore</a>
+        <a href="/artists.html" class="block text-black hover:text-yellow-500">Artists</a>
+        <a href="/uploadart.html" class="block text-black hover:text-yellow-500">Upload</a>
+    
+        <!-- User dropdown (simplified for mobile) -->
+        <div class="pt-2 border-t">
+          <a href="/mycollections.html" class="block text-black hover:text-yellow-500">My Art Collection</a>
+          <a href="/uploadart.html" class="block text-black hover:text-yellow-500">Upload New Pixel Art</a>
+          <a href="/editprofile.html" class="block text-black hover:text-yellow-500">Edit Profile</a>
+          <a href="/order-details.html" class="block text-black hover:text-yellow-500">Order Details</a>
+          <a href="/auth.html" class="block text-black hover:text-yellow-500">Logout</a>
         </div>
-      </nav>
+      </div>
+    
+      <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const mobileMenu = document.getElementById("mobile-menu");
+    
+        toggleBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
     </header>
+    
 
     <!-- Main Container with max width and centered -->
     <div class="max-w-4xl mx-auto">
       <!-- Header -->
       <header class="mb-8 text-center card mt-8 p-4">
-        <h1 class="text-4xl font-bold">🎮 Explore Pixel Art</h1>
+        <h1 class="text-4xl font-bold"> Explore Pixel Art</h1>
         <p class="text-lg">
           Collect, trade, and admire retro-style pixel artwork
         </p>
@@ -188,6 +187,49 @@
         <button id="close-alert" class="pixel-btn w-full">Close</button>
       </div>
     </div>
+
+
+    <!-- Footer -->
+    <div class="max-w-4xl mx-auto">
+    <footer class="bg-white card  py-5 px-6 mt-20 border-t border-border">
+      <div class=" mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Logo & Tagline -->
+        <div>
+          <h2 class="text-2xl font-bold text-[#ffd700]">ArtHub</h2>
+          <p class="text-muted mt-2 text-sm">
+            Showcasing emerging artists. Empowering creativity.
+          </p>
+        </div>
+    
+        <!-- Navigation Links -->
+        <div>
+          <h3 class="text-lg font-semibold text-[#ffd700] mb-2">Links</h3>
+          <ul class="space-y-1 text-sm text-muted">
+            <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Explore Artists</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Submit Artwork</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+          </ul>
+        </div>
+    
+        <!-- Contact & Socials -->
+        <div>
+          <h3 class="text-lg font-semibold text-[#ffd700] mb-2">Get in Touch</h3>
+          <ul class="space-y-1 text-sm text-muted">
+            <li>Email: <a href="mailto:support@arthub.com" class="hover:text-yellow-400">support@arthub.com</a></li>
+            <li>Instagram: <a href="#" class="hover:text-yellow-400">@arthub</a></li>
+            <li>Twitter: <a href="#" class="hover:text-yellow-400">@arthub</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- Copyright -->
+      <div class="mt-10 pt-4 text-center  text-xs text-muted border-t border-border">
+        © 2025 ArtHub. All rights reserved.
+      </div>
+    </footer>
+    </div>
+
 
     <script>
       // Function to show the alert
