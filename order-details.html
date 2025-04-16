@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Confirmed Orders</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@hackernoon/pixel-icon-library@1.0.5/fonts/iconfont.min.css"
     />
-       <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,18 +18,19 @@
     />
     <style>
       body {
-font-family: "Pixelify Sans", sans-serif;
+        font-family: "Pixelify Sans", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 600;        background-color: #fdf6e3;
+        font-weight: 600;
+        background-color: #fdf6e3;
       }
-    .pixel-btn {
+      .pixel-btn {
         border: 1px solid black;
         background: #ffd700;
         padding: 6px 12px;
         font-weight: bold;
         box-shadow: 3px 3px 0 black;
       }
-       .card {
+      .card {
         border: 1px solid black;
         background-color: white;
         box-shadow: 3px 3px 0 black;
@@ -100,111 +101,164 @@ font-family: "Pixelify Sans", sans-serif;
   </head>
   <body class="p-6">
     <!-- Navbar -->
-   <header class="bg-white md:max-w-4xl mx-auto  card">
-      <div class="  px-4 py-3 flex items-center justify-between">
-        <a href="/" class="text-xl font-bold text-black">RetroPixel</a>
-    
+    <header class="bg-white md:max-w-4xl mx-auto card">
+      <div class="px-4 py-3 flex items-center justify-between">
+        <a href="/index.html" class="text-xl font-bold text-black"
+          >RetroPixel</a
+        >
+
         <!-- Hamburger -->
-        <button id="menu-toggle" class="md:hidden text-2xl text-black focus:outline-none">
+        <button
+          id="menu-toggle"
+          class="md:hidden text-2xl text-black focus:outline-none"
+        >
           ☰
         </button>
-    
+
         <!-- Nav links -->
         <nav id="menu" class="hidden md:flex space-x-6 items-center">
           <a href="/" class="text-black hover:text-yellow-500">Explore</a>
-          <a href="artists.html" class="text-black hover:text-yellow-500">Artists</a>
-          <a href="uploadart.html" class="text-black hover:text-yellow-500">Upload</a>
-          
+          <a href="artists.html" class="text-black hover:text-yellow-500"
+            >Artists</a
+          >
+          <a href="uploadart.html" class="text-black hover:text-yellow-500"
+            >Upload</a
+          >
+
           <!-- User dropdown -->
-          <div class="relative group ">
-            <i class="hn hn-user-solid text-2xl cursor-pointer" style="color: #ffd700"></i>
-            <div class="absolute hidden group-hover:block right-0 top-5 mt-2 w-48  bg-white card z-20">
-                <a href="mycollections.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">My Art Collection</a>
-                <a href="uploadart.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Upload New Pixel Art</a>
-                <a href="editprofile.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Edit Profile</a>
-                <a href="order-details.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Order Details</a>
-                <a href="auth.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Logout</a>
+          <div class="relative group">
+            <i
+              class="hn hn-user-solid text-2xl cursor-pointer"
+              style="color: #ffd700"
+            ></i>
+            <div
+              class="absolute hidden group-hover:block right-0 top-5 mt-2 w-48 bg-white card z-20"
+            >
+              <a
+                href="mycollections.html"
+                class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black"
+                >My Art Collection</a
+              >
+              <a
+                href="uploadart.html"
+                class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black"
+                >Upload New Pixel Art</a
+              >
+              <a
+                href="editprofile.html"
+                class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black"
+                >Edit Profile</a
+              >
+              <a
+                href="order-details.html"
+                class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black"
+                >Order Details</a
+              >
+              <a
+                href="auth.html"
+                class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black"
+                >Logout</a
+              >
             </div>
           </div>
         </nav>
       </div>
-    
+
       <!-- Mobile nav menu -->
       <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
         <a href="/" class="block text-black hover:text-yellow-500">Explore</a>
-        <a href="artists.html" class="block text-black hover:text-yellow-500">Artists</a>
-        <a href="uploadart.html" class="block text-black hover:text-yellow-500">Upload</a>
-    
+        <a href="artists.html" class="block text-black hover:text-yellow-500"
+          >Artists</a
+        >
+        <a href="uploadart.html" class="block text-black hover:text-yellow-500"
+          >Upload</a
+        >
+
         <!-- User dropdown (simplified for mobile) -->
         <div class="pt-2 border-t">
-          <a href="mycollections.html" class="block text-black hover:text-yellow-500">My Art Collection</a>
-          <a href="uploadart.html" class="block text-black hover:text-yellow-500">Upload New Pixel Art</a>
-          <a href="editprofile.html" class="block text-black hover:text-yellow-500">Edit Profile</a>
-          <a href="order-details.html" class="block text-black hover:text-yellow-500">Order Details</a>
-          <a href="auth.html" class="block text-black hover:text-yellow-500">Logout</a>
+          <a
+            href="mycollections.html"
+            class="block text-black hover:text-yellow-500"
+            >My Art Collection</a
+          >
+          <a
+            href="uploadart.html"
+            class="block text-black hover:text-yellow-500"
+            >Upload New Pixel Art</a
+          >
+          <a
+            href="editprofile.html"
+            class="block text-black hover:text-yellow-500"
+            >Edit Profile</a
+          >
+          <a
+            href="order-details.html"
+            class="block text-black hover:text-yellow-500"
+            >Order Details</a
+          >
+          <a href="auth.html" class="block text-black hover:text-yellow-500"
+            >Logout</a
+          >
         </div>
       </div>
-    
+
       <script>
         const toggleBtn = document.getElementById("menu-toggle");
         const menu = document.getElementById("menu");
         const mobileMenu = document.getElementById("mobile-menu");
-    
+
         toggleBtn.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
         });
       </script>
     </header>
-<!-- Main Container with max width and centered -->
-<div class="md:max-w-4xl mx-auto">
-    <!-- Header -->
-    <header class="mb-8 text-center card mt-8 p-4">
-      <h1 class="text-4xl font-bold"> Confirmed Orders</h1>
-      <p class="text-lg">
-        Here are your confirmed pixel art orders
-      </p>
-    </header>
+    <!-- Main Container with max width and centered -->
+    <div class="md:max-w-4xl mx-auto">
+      <!-- Header -->
+      <header class="mb-8 text-center card mt-8 p-4">
+        <h1 class="text-4xl font-bold">Confirmed Orders</h1>
+        <p class="text-lg">Here are your confirmed pixel art orders</p>
+      </header>
 
-    <!-- Loop through each order in localStorage -->
-    <div id="order-cards">
-      <!-- Order cards will be dynamically generated here -->
+      <!-- Loop through each order in localStorage -->
+      <div id="order-cards">
+        <!-- Order cards will be dynamically generated here -->
+      </div>
+      <audio id="successSound" src="/audio/success.wav"></audio>
     </div>
-    <audio id="successSound" src="/audio/success.wav"></audio>
 
-  </div>
+    <!-- Include JSZip and FileSaver.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.8.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
-   <!-- Include JSZip and FileSaver.js from CDN -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.8.0/jszip.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-
-  <script>
-    // Function to play sound
-    function playSound() {
+    <script>
+      // Function to play sound
+      function playSound() {
         const sound = document.getElementById("successSound");
         sound.play();
-    }
-     function downloadItems(orderIndex) {
+      }
+      function downloadItems(orderIndex) {
         // Play success sound
         playSound();
         // Retrieve the order data from localStorage
         const allOrders = JSON.parse(localStorage.getItem("order_details"));
         const order = allOrders[orderIndex];
-        
+
         const zip = new JSZip();
-        
+
         // Loop through each item in the order and add to ZIP
         order.items.forEach((item, index) => {
           const imageUrl = item.image;
-          
+
           // Fetch image data and add it to the zip file
           fetch(imageUrl)
-            .then(response => response.blob())
-            .then(blob => {
+            .then((response) => response.blob())
+            .then((blob) => {
               zip.file(`item-${index + 1}.png`, blob);
-              
+
               // If all files are added, generate the ZIP file
               if (index === order.items.length - 1) {
-                zip.generateAsync({ type: "blob" }).then(function(content) {
+                zip.generateAsync({ type: "blob" }).then(function (content) {
                   // Save the ZIP file
                   saveAs(content, `order-${orderIndex + 1}-images.zip`);
                 });
@@ -213,71 +267,72 @@ font-family: "Pixelify Sans", sans-serif;
         });
       }
 
-    window.onload = function() {
-      // Retrieve all order details from localStorage
-      const allOrders = JSON.parse(localStorage.getItem("order_details"));
+      window.onload = function () {
+        // Retrieve all order details from localStorage
+        const allOrders = JSON.parse(localStorage.getItem("order_details"));
 
-      if (allOrders && Array.isArray(allOrders)) {
-        const orderCardsContainer = document.getElementById("order-cards");
+        if (allOrders && Array.isArray(allOrders)) {
+          const orderCardsContainer = document.getElementById("order-cards");
 
-        // Loop through each order and create a card for it
-        allOrders.forEach((order, index) => {
-          // Create the card for this order
-          const orderCard = document.createElement("div");
-          orderCard.classList.add("card", "p-6", "mb-8");
+          // Loop through each order and create a card for it
+          allOrders.forEach((order, index) => {
+            // Create the card for this order
+            const orderCard = document.createElement("div");
+            orderCard.classList.add("card", "p-6", "mb-8");
 
-          // Header for the card
-          const orderHeader = document.createElement("h2");
-          orderHeader.classList.add("text-3xl", "font-bold", "mb-4");
-          orderHeader.textContent = `Order ${index + 1} Summary`;
-          orderCard.appendChild(orderHeader);
+            // Header for the card
+            const orderHeader = document.createElement("h2");
+            orderHeader.classList.add("text-3xl", "font-bold", "mb-4");
+            orderHeader.textContent = `Order ${index + 1} Summary`;
+            orderCard.appendChild(orderHeader);
 
-          // Art Badges
-          const artBadgesContainer = document.createElement("div");
-          artBadgesContainer.classList.add("flex", "flex-wrap", "mb-6");
-          order.items.forEach(item => {
-            const badge = document.createElement("div");
-            badge.classList.add("badge");
+            // Art Badges
+            const artBadgesContainer = document.createElement("div");
+            artBadgesContainer.classList.add("flex", "flex-wrap", "mb-6");
+            order.items.forEach((item) => {
+              const badge = document.createElement("div");
+              badge.classList.add("badge");
 
-            const img = document.createElement("img");
-            img.src = item.image;
-            img.alt = item.title;
+              const img = document.createElement("img");
+              img.src = item.image;
+              img.alt = item.title;
 
-            badge.appendChild(img);
-            artBadgesContainer.appendChild(badge);
-          });
-          orderCard.appendChild(artBadgesContainer);
+              badge.appendChild(img);
+              artBadgesContainer.appendChild(badge);
+            });
+            orderCard.appendChild(artBadgesContainer);
 
-          // Confirmation Message
-          const confirmationMessage = document.createElement("p");
-          confirmationMessage.classList.add("confirmation-message");
-          confirmationMessage.textContent = "Your order has been confirmed! Thank you for purchasing.";
-          orderCard.appendChild(confirmationMessage);
+            // Confirmation Message
+            const confirmationMessage = document.createElement("p");
+            confirmationMessage.classList.add("confirmation-message");
+            confirmationMessage.textContent =
+              "Your order has been confirmed! Thank you for purchasing.";
+            orderCard.appendChild(confirmationMessage);
 
-          // Order Summary
-          const orderSummary = document.createElement("div");
-          orderSummary.classList.add("order-summary", "text-lg");
-          orderSummary.innerHTML = `
+            // Order Summary
+            const orderSummary = document.createElement("div");
+            orderSummary.classList.add("order-summary", "text-lg");
+            orderSummary.innerHTML = `
             <p>Total Number of Items: ${order.items.length}</p>
             <p>Total Price: $${order.totalAmount}</p>
           `;
-          orderCard.appendChild(orderSummary);
+            orderCard.appendChild(orderSummary);
 
-          // Download Button
-          const downloadButton = document.createElement("button");
-          downloadButton.classList.add("download-btn");
-          downloadButton.textContent = "Download All Items";
-          downloadButton.onclick = () => downloadItems(index); // Pass order index to download function
-          downloadButton.style.float = "right";
-          orderCard.appendChild(downloadButton);
+            // Download Button
+            const downloadButton = document.createElement("button");
+            downloadButton.classList.add("download-btn");
+            downloadButton.textContent = "Download All Items";
+            downloadButton.onclick = () => downloadItems(index); // Pass order index to download function
+            downloadButton.style.float = "right";
+            orderCard.appendChild(downloadButton);
 
-          // Append this order card to the container
-          orderCardsContainer.appendChild(orderCard);
-        });
-      } else {
-        console.log("No order details found in localStorage.");
-      }
-    };
-  </script>
-</body>
+            // Append this order card to the container
+            orderCardsContainer.appendChild(orderCard);
+          });
+        } else {
+          console.log("No order details found in localStorage.");
+        }
+      };
+    </script>
+  </body>
 </html>

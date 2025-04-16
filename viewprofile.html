@@ -79,9 +79,7 @@
   <body class="p-6">
     <header class="bg-white md:max-w-4xl mx-auto card">
       <div class="px-4 py-3 flex items-center justify-between">
-        <a href="/" class="text-xl font-bold text-black"
-          >RetroPixel</a
-        >
+        <a href="/" class="text-xl font-bold text-black">RetroPixel</a>
 
         <!-- Hamburger -->
         <button
@@ -93,9 +91,7 @@
 
         <!-- Nav links -->
         <nav id="menu" class="hidden md:flex space-x-6 items-center">
-          <a href="/" class="text-black hover:text-yellow-500"
-            >Explore</a
-          >
+          <a href="/" class="text-black hover:text-yellow-500">Explore</a>
           <a href="artists.html" class="text-black hover:text-yellow-500"
             >Artists</a
           >
@@ -144,9 +140,7 @@
 
       <!-- Mobile nav menu -->
       <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-        <a href="/" class="block text-black hover:text-yellow-500"
-          >Explore</a
-        >
+        <a href="/" class="block text-black hover:text-yellow-500">Explore</a>
         <a href="artists.html" class="block text-black hover:text-yellow-500"
           >Artists</a
         >
@@ -245,6 +239,14 @@
     </div>
 
     <script>
+      // Redirect to login.html if user is not logged in
+      const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+      if (!isLoggedIn || isLoggedIn !== "true") {
+        window.location.href = "auth.html"; // Use relative path!
+        return;
+      }
+      
       // Sample pixel art items
       const pixelArtItems = [
         {
