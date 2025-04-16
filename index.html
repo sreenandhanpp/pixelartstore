@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Pixel Art</title>
     <link
       rel="stylesheet"
@@ -100,7 +101,7 @@ font-family: "Pixelify Sans", sans-serif;
   </head>
   <body class="p-6">
     <!-- Navbar -->
-    <header class="bg-white max-w-4xl mx-auto  card">
+    <header class="bg-white sm:max-w-full md:max-w-4xl mx-auto  card">
       <div class="  px-4 py-3 flex items-center justify-between">
         <a href="/index.html" class="text-xl font-bold text-black">RetroPixel</a>
         <!-- Hamburger -->
@@ -114,8 +115,10 @@ font-family: "Pixelify Sans", sans-serif;
           <a href="/artists.html" class="text-black hover:text-yellow-500">Artists</a>
           <a href="/uploadart.html" class="text-black hover:text-yellow-500">Upload</a>
           
+          <a href="/auth.html" class="text-black hover:text-yellow-500 login-link">Login</a>
+
           <!-- User dropdown -->
-          <div class="relative group ">
+          <div class="relative group auth-dropdown">
             <i class="hn hn-user-solid text-2xl cursor-pointer" style="color: #ffd700"></i>
             <div class="absolute hidden group-hover:block right-0 top-5 mt-2 w-48  bg-white card z-20">
                 <a href="/mycollections.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">My Art Collection</a>
@@ -157,7 +160,7 @@ font-family: "Pixelify Sans", sans-serif;
     
 
     <!-- Main Container with max width and centered -->
-    <div class="max-w-4xl mx-auto">
+    <div class="md:max-w-4xl mx-auto">
       <!-- Header -->
       <header class="mb-8 text-center card mt-8 p-4">
         <h1 class="text-4xl font-bold"> Explore Pixel Art</h1>
@@ -190,7 +193,7 @@ font-family: "Pixelify Sans", sans-serif;
 
 
     <!-- Footer -->
-    <div class="max-w-4xl mx-auto">
+    <div class="md:max-w-4xl mx-auto">
     <footer class="bg-white card  py-5 px-6 mt-20 border-t border-border">
       <div class=" mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Logo & Tagline -->
@@ -256,8 +259,8 @@ font-family: "Pixelify Sans", sans-serif;
       };
 
       const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-      const loginLink = document.querySelector('a[href="auth.html"]');
-      const userDropdown = document.querySelector(".dropdown");
+      const loginLink = document.querySelector('.login-link');
+      const userDropdown = document.querySelector(".auth-dropdown");
 
       if (loginLink && userDropdown) {
         if (isLoggedIn) {
