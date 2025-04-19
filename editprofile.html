@@ -108,61 +108,7 @@ font-family: "Pixelify Sans", sans-serif;
   </head>
   <body class="p-6">
     <!-- Navbar -->
-   <header class="bg-white md:max-w-4xl mx-auto  card">
-      <div class="  px-4 py-3 flex items-center justify-between">
-        <a href="/pixelartstore/" class="text-xl font-bold text-black">RetroPixel</a>
-    
-        <!-- Hamburger -->
-        <button id="menu-toggle" class="md:hidden text-2xl text-black focus:outline-none">
-          ☰
-        </button>
-    
-        <!-- Nav links -->
-        <nav id="menu" class="hidden md:flex space-x-6 items-center">
-          <a href="/pixelartstore/" class="block text-black hover:text-yellow-500">Explore</a>
-          <a href="artists.html" class="text-black hover:text-yellow-500">Artists</a>
-          <a href="uploadart.html" class="text-black hover:text-yellow-500">Upload</a>
-          
-          <!-- User dropdown -->
-          <div class="relative group ">
-            <i class="hn hn-user-solid text-2xl cursor-pointer" style="color: #ffd700"></i>
-            <div class="absolute hidden group-hover:block right-0 top-5 mt-2 w-48  bg-white card z-20">
-                <a href="mycollections.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">My Art Collection</a>
-                <a href="uploadart.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Upload New Pixel Art</a>
-                <a href="editprofile.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Edit Profile</a>
-                <a href="order-details.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Order Details</a>
-                <a href="auth.html" class="block px-4 py-2 text-black hover:bg-yellow-100 border-b border-black">Logout</a>
-            </div>
-          </div>
-        </nav>
-      </div>
-    
-      <!-- Mobile nav menu -->
-      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-        <a href="/pixelartstore/" class="block text-black hover:text-yellow-500">Explore</a>
-        <a href="artists.html" class="block text-black hover:text-yellow-500">Artists</a>
-        <a href="uploadart.html" class="block text-black hover:text-yellow-500">Upload</a>
-    
-        <!-- User dropdown (simplified for mobile) -->
-        <div class="pt-2 border-t">
-          <a href="mycollections.html" class="block text-black hover:text-yellow-500">My Art Collection</a>
-          <a href="uploadart.html" class="block text-black hover:text-yellow-500">Upload New Pixel Art</a>
-          <a href="editprofile.html" class="block text-black hover:text-yellow-500">Edit Profile</a>
-          <a href="order-details.html" class="block text-black hover:text-yellow-500">Order Details</a>
-          <a href="auth.html" class="block text-black hover:text-yellow-500">Logout</a>
-        </div>
-      </div>
-    
-      <script>
-        const toggleBtn = document.getElementById("menu-toggle");
-        const menu = document.getElementById("menu");
-        const mobileMenu = document.getElementById("mobile-menu");
-    
-        toggleBtn.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-        });
-      </script>
-    </header>
+    <app-header></app-header>
 
     <!-- Main Container with max width and centered -->
     <div class="md:max-w-4xl mx-auto">
@@ -246,70 +192,9 @@ font-family: "Pixelify Sans", sans-serif;
     </div>
 
     <audio id="click-sound" src="/audio/click1.wav"></audio>
-    <script>
-          // Function to show the alert
-function showAlert(message = "Default message", title = "Alert") {
-  const alertModal = document.getElementById("custom-alert");
-  const alertMessage = document.getElementById("alert-message");
-  const alertTitle = document.querySelector("#custom-alert h3");
-  
-  alertMessage.textContent = message;
-  alertTitle.textContent = title;
-  alertModal.style.display = "flex"; // Change from removing 'hidden' to setting display
-  alertModal.classList.remove("hidden");
-}
 
-// Function to close the alert
-function closeAlert() {
-  const alertModal = document.getElementById("custom-alert");
-  alertModal.style.display = "none";
-  alertModal.classList.add("hidden");
-}
-
-document.getElementById("close-alert").onclick = function() {
-  closeAlert();
-};
-      // Get form elements
-      const form = document.getElementById("profile-form");
-      const usernameInput = document.getElementById("username");
-      const emailInput = document.getElementById("email");
-      const passwordInput = document.getElementById("password");
-      const bioInput = document.getElementById("bio");
-      const successSound = document.getElementById("successSound");
-      const clickSound = document.getElementById("click-sound");
-
-      // Load user data from localStorage
-      window.addEventListener("load", () => {
-        usernameInput.value = localStorage.getItem("username") || "";
-        emailInput.value = localStorage.getItem("userEmail") || "";
-        passwordInput.value = localStorage.getItem("userPassword") || "";
-        bioInput.value = localStorage.getItem("userBio") || "";
-      });
-
-      // Add click sound to all buttons
-      document.querySelectorAll("button").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          clickSound.currentTime = 0;
-          clickSound.play();
-        });
-      });
-
-      // Handle form submission
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        // Update localStorage with new values
-        localStorage.setItem("username", usernameInput.value);
-        localStorage.setItem("userEmail", emailInput.value);
-        localStorage.setItem("userPassword", passwordInput.value);
-        localStorage.setItem("userBio", bioInput.value);
-
-        // Play success sound
-        successSound.play();
-
-        // Show success message
-        showAlert("Profile updated successfully!");
-      });
-    </script>
+    <script src="./js/main.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/editprofie.js"></script>
   </body>
 </html>
